@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="error-div" style="display: none;"><span  id="error">Errors</span><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
+        <div class="containerWrapper">
+            <div class="loginContainer" id="LoginDiv">
+                <h1>Login</h1>
+                <div class="form">
+                    <form action="/" method="get">
+                        <div class="">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="userName" required>
+                        </div>
+                        <div class="">
+                            <label for="password">Password</label>
+                            <input type="password" id="passWord" required>
+                        </div>
+                        <button type="submit" id="login-btn">Login</button>
+                    </form>
+                </div>
+                <div class="signup">
+                    <span>Don't have an account?</span>
+                    <a href="javascript:void(0)" id="ShowSignUP">
+                        Sign Up
+                    </a>
+                </div>
+            </div>
+            <div class="SignupContainer" style="display: none;" id="SignUpDiv">
+                <h1>Sign Up</h1>
+                <div class="form">
+                    <form action="/" method="get">
+                        <div class="">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="userName" required>
+                        </div>
+                        <div class="">
+                            <label for="password">Password</label>
+                            <input type="password" id="passWord" required>
+                        </div>
+                        <button type="submit" id="login-btn">Sign Up</button>
+                    </form>
+                </div>
+                <div class="signup">
+                    <span>Have a Account?</span>
+                    <a href="javascript:void(0)" id="ShowLogin">
+                        Login
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="script.js"></script>
+</body>
+</html>
