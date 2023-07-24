@@ -35,8 +35,22 @@ closeIcon.addEventListener('click',() =>{
 
 showSignUpBtn.addEventListener("click",() =>{
     console.log("LoginShow")
-    if(loginDiv.style.display == "block"){
-        loginDiv.style.display == "none"
+    if(SignUpDiv.style.display === "none"){
+        SignUpDiv.removeAttribute('style')
+        loginDiv.style.display = "none"
+    }else{
+        SignUpDiv.style.display = "none"
+        loginDiv.style.display = "block"
+    }
+})
+
+showLoginBtn.addEventListener('click',() =>{
+    if(loginDiv.style.display === "none"){
+        loginDiv.removeAttribute('style')
+        SignUpDiv.style.display = "none"
+    }else{
+        loginDiv.style.display = "none"
+        SignUpDiv.style.display = "block"
     }
 })
 
