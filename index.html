@@ -6,37 +6,27 @@
     <title>Form Validate</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 <body>
-    <div class="container">
-        <div id="error-div" style="display: none;"><span  id="error">Errors</span><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
-        <div class="containerWrapper">
-            <div class="loginContainer" >
-                <div  class="loginInnerContainer AnimationContainer" id="LoginDiv">
-                    <h1>Login</h1>
-                    <div class="form">
-                        <form action="/" method="get">
-                            <div class="">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="userName" required>
-                            </div>
-                            <div class="">
-                                <label for="password">Password</label>
-                                <input type="password" id="passWord" required>
-                            </div>
-                            <button type="submit" id="login-btn">Login</button>
-                        </form>
-                    </div>
-                    <div class="signup">
-                        <span>Don't have an account?</span>
-                        <a href="javascript:void(0)" id="ShowSignUP">
-                            Sign Up
-                        </a>
-                    </div>
-                </div>
-                <div class="AnimationContainer" style="display: none;" id="SignUpDiv">
-                    <div class="SignupContainer">
-                        <h1>Sign Up</h1>
+    <div class="page-content">
+        <div class="navbar">
+            <div class="nav-left-content">
+                Advice
+            </div>
+            <div class="nav-mid-content">
+                The world isn’t perfect. But it’s there for us, doing the best it can… that’s what makes it so damn beautiful.
+            </div>
+            <div class="nav-right-content">
+                <i class="bi bi-person"></i>
+            </div>
+        </div>
+        <div class="container">
+            <div id="error-div" style="display: none;"><span  id="error">Errors</span><i class="fa fa-times-circle-o" aria-hidden="true"></i></div>
+            <div class="containerWrapper">
+                <div class="loginContainer"  id="LoginContainerWrapper">
+                    <div  class="loginInnerContainer AnimationContainer" id="LoginDiv">
+                        <h1>Login</h1>
                         <div class="form">
                             <form action="/" method="get">
                                 <div class="">
@@ -45,22 +35,51 @@
                                 </div>
                                 <div class="">
                                     <label for="password">Password</label>
-                                    <input type="password" id="passWord" required>
+                                    <input type="password" id="passWord" required autocomplete="current-password">
                                 </div>
-                                <button type="submit" id="login-btn">Sign Up</button>
+                                <button type="submit" id="login-btn">Login</button>
                             </form>
                         </div>
                         <div class="signup">
-                            <span>Have a Account?</span>
-                            <a href="javascript:void(0)" id="ShowLogin">
-                                Login
+                            <span>Don't have an account?</span>
+                            <a href="javascript:void(0)" id="ShowSignUP">
+                                Sign Up
                             </a>
                         </div>
                     </div>
-            </div>
+                    <div class="AnimationContainer" style="display: none;" id="SignUpDiv">
+                        <div class="SignupContainer">
+                            <h1>Sign Up</h1>
+                            <div class="form">
+                                <form>
+                                    <div class="">
+                                        <label for="name">Name</label>
+                                        <input type="name" name="name" id="SignuserName" required autocomplete="name">
+                                    </div>
+                                    <div class="">
+                                        <label for="name">Email</label>
+                                        <input type="email" name="email" id="SignuserEmail" required autocomplete="email">
+                                    </div>
+                                    <div class="">
+                                        <label for="password">Password</label>
+                                        <input type="password" id="SignpassWord" required autocomplete="current-password">
+                                    </div>
+                                    <button type="submit" id="Sign-btn">Sign Up</button>
+                                </form>
+                            </div>
+                            <div class="signup">
+                                <span>Have a Account?</span>
+                                <a href="javascript:void(0)" id="ShowLogin">
+                                    Login
+                                </a>
+                            </div>
+                        </div>
+                </div>
+                </div>
             </div>
         </div>
     </div>
     <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>

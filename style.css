@@ -1,14 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
 
 
+body{
+    margin:0;
+    padding: 0;
+}
+
+
+*,::before,::after{
+    box-sizing: border-box;
+    font-family: 'Caprasimo', cursive;
+    
+}
+
+.page-content{
+    display:flex;
+    flex-direction: column;
+}
+
+
+/* nav css*/
+
+.navbar{
+    width: 100%;
+    border-bottom:2px solid #000;
+    padding:5px 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.nav-mid-content{
+    margin:0 auto;
+    animation:mid-content;
+    animation-fill-mode: backwards;
+    animation-duration: .22s;
+    transition: .3s ease;
+}
+
+/*nav css ends*/
 
 .container {
     display: grid;
     place-items: center;
     height: 550px;
-    font-family: 'Caprasimo', cursive;
     position: relative;
-
 }
 
 .containerWrapper .loginContainer {
@@ -21,6 +59,7 @@
     box-shadow: 6px 3px;
     border: 2px solid #000;
     border-radius: 6px;
+    transition: 0.3s ease-in-out;
 }
 .containerWrapper .loginContainer .loginInnerContainer{
     display: flex;
@@ -84,16 +123,7 @@ button {
     cursor: pointer;
 }
 
-@keyframes error_div{
-    0%{
-        opacity: 0;
-        transform:translateY(-80px);
-    }
-    100%{
-        opacity:1;
-        transform: translateY(4px);
-    }
-}
+
 
 .SignupContainer{
     display:flex;
@@ -120,5 +150,27 @@ button {
     100%{
         opacity:1;
         transform:translateY(0px)
+    }
+}
+
+@keyframes error_div{
+    0%{
+        opacity: 0;
+        transform:translateY(-80px);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(4px);
+    }
+}
+
+@keyframes mid-content{
+    0%{
+        opacity:0;
+        transform: translateY(80px);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0px);
     }
 }
